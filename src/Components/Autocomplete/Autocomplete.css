@@ -1,29 +1,31 @@
 .autocomplete {
     position: relative;
-    width: 80%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 400px; /* Adjust max-width as needed */
     margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
   }
   
   .search-box {
     width: 100%;
-    padding: 12px 20px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
   }
   
   .suggestions {
     position: absolute;
     width: 100%;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-top: none;
-    border-radius: 0 0 5px 5px;
-    max-height: 200px;
-    overflow-y: auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    padding: 0;
+    list-style-type: none;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1;
   }
   
   .suggestions li {
@@ -32,15 +34,35 @@
   }
   
   .suggestions li:hover {
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
   }
   
   .error {
     color: red;
-    margin-top: 10px;
+    margin-top: 5px;
   }
   
-  .no-suggestions {
-    margin-top: 10px;
+  /* Media Queries for Responsive Design */
+  
+  @media (max-width: 768px) {
+    .autocomplete {
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .autocomplete {
+      padding: 10px;
+    }
+    .search-box {
+      padding: 8px;
+      font-size: 14px;
+    }
+    .suggestions {
+      margin-top: 3px;
+    }
+    .suggestions li {
+      padding: 8px;
+    }
   }
   
