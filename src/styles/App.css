@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../assets/images/Background_Image.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    /* Use a linear gradient for text color */
+    background: linear-gradient(to right, #f00, #ff0, #0f0, #00f); /* Adjust colors as needed */
+    -webkit-background-clip: text; /* Clip the gradient within the text */
+    -webkit-text-fill-color: transparent; /* Hide the original text color */
+  }
+  
+  
